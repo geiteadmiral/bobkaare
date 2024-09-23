@@ -1,6 +1,6 @@
 <!doctype html>
 
-<html>
+<html lang="nb">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,8 +13,32 @@
     </head>
 
     <body>
+        <header class="pageheader">
+            <div>
+                <h1 class="headertitle">Bob Kåre</h1>
+            </div>
+            <nav >
+                <ul class="headernav">
+                    <li><a href="#">Link 1</a></li>
+                    <li><a href="#">Link 2</a></li>
+                    <li><a href="#">Link 3</a></li>
+                    <li><a href="#">Link 4</a></li>
+                </ul>
+            </nav>
+        </header>
 
-        <h1>Test 2</h1>
+        <button onclick="openSidebar()" class="openbtn">&#9776;</button>
+        <aside class="sidebar">
+            <button onclick="closeSidebar()" class="closebtn">&times</button>
+            <nav >
+                <ul class="headernav">
+                    <li><a href="#">Link 1</a></li>
+                    <li><a href="#">Link 2</a></li>
+                    <li><a href="#">Link 3</a></li>
+                    <li><a href="#">Link 4</a></li>
+                </ul>
+            </nav>
+        </aside>
         
         <!-- Load external JavaScript -->
         <script src="scripts.js"></script>
