@@ -1,13 +1,12 @@
 <!doctype html>
 
-<html lang="nb">
+<html lang="en">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <title>Bob Kåre</title>
 
-        <!-- Load external CSS styles -->
         <link rel="stylesheet" href="styles.css">
 
     </head>
@@ -19,7 +18,7 @@
             </div>
             <nav >
                 <ul class="headernav">
-                    <li><a href="#">Link 1</a></li>
+                    <li><a  class="current">Home</a></li>
                     <li><a href="#">Link 2</a></li>
                     <li><a href="#">Link 3</a></li>
                     <li><a href="#">Link 4</a></li>
@@ -30,17 +29,28 @@
         <button onclick="openSidebar()" class="openbtn">&#9776;</button>
         <aside class="sidebar">
             <button onclick="closeSidebar()" class="closebtn">&times</button>
+            <h1 class="headertitle">Bob Kåre</h1>
             <nav >
                 <ul class="headernav">
-                    <li><a href="#">Link 1</a></li>
+                    <li><a href="#" class="current">Link 1</a></li>
                     <li><a href="#">Link 2</a></li>
                     <li><a href="#">Link 3</a></li>
                     <li><a href="#">Link 4</a></li>
                 </ul>
             </nav>
         </aside>
+
+        <div class="main">
+            <h1>Home screen title</h1>
+            <div class="split">
+                <div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus pretium metus sit amet libero blandit luctus. Aenean et orci vulputate, finibus ligula eget, fermentum dui. Vestibulum ornare vehicula ipsum in sagittis. Nulla molestie facilisis ligula, in fermentum eros volutpat id. Curabitur dignissim lorem a lacus semper blandit. </p>
+                    <p>Donec faucibus magna nec enim malesuada accumsan. Morbi scelerisque purus consequat ante condimentum, quis ornare elit blandit. Nulla facilisi. Praesent suscipit risus eget diam fermentum blandit. Quisque a varius magna. Duis dictum, diam in posuere tincidunt, erat lacus ullamcorper lorem, nec feugiat nunc lacus sit amet nulla.</p>
+                </div>
+                <img src="bilder/kaare.jpg" alt="Picture of Bob Kåre staring into the camera, smiling"/>
+            </div>
+        </div>
         
-        <!-- Load external JavaScript -->
         <script src="scripts.js"></script>
         
     </body>

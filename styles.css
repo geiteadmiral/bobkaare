@@ -25,6 +25,10 @@ h1 {
     color: #E5DCC5;
 }
 
+p {
+    font-family: sans-serif;
+}
+
 /*header -------------------------------------*/
 
 .pageheader {
@@ -52,8 +56,15 @@ h1 {
 }
 
 .headernav a:hover {
-    background-color: #a93640;
+    background-color: #7f2c33;
 }
+
+a.current {
+    cursor: default;
+    background-color: #7f2c33;
+}
+
+
 
 /*Sidebar----------------------------------*/
 .openbtn {
@@ -90,11 +101,42 @@ h1 {
     cursor: pointer;
 }
 
+/*Hovedinnhold -------------------------------*/
+
+.main {
+    width: 80vw;
+    margin: auto;
+    padding-top: 20px;
+}
+
+.main h1 {
+    font-size: 2rem;
+}
+
+.main p {
+    text-align: center;
+    color: #E5DCC5;
+    margin: 10px;
+}
+
+.split {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    align-items: center;
+    margin: 20px;
+    justify-items: center;
+}
+
+.split img {
+    width: 80%;
+}
+
+
 /*Responsivtet -----------------------------*/
 
 /*For små skjermer*/
-@media (max-width: 640px){
-    .pageheader{
+@media (max-width: 640px) {
+    .pageheader {
         display: none;
     }
 
@@ -106,8 +148,22 @@ h1 {
         padding: 20px;
         flex-direction: column;
         align-items: center;
+        gap: 40px;
     }
 
+    .headernav a {
+        padding: 10px 20px;
+        display: block;
+        width: 200px;
+        text-align: center;
+    }
+
+    .headertitle {
+        padding-top: 10px;
+        width: 300px;
+        text-align: center;
+        overflow-x: hidden;
+    }
 
 }
 

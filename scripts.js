@@ -7,3 +7,9 @@ function openSidebar(){
 function closeSidebar(){
     sidebar.style.width = "0"
 }
+
+window.addEventListener("resize", () => {
+    if (window.innerWidth <= 1024) {
+        closeSidebar()
+    }   
+})
