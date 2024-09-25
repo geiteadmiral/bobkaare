@@ -9,7 +9,7 @@ function closeSidebar(){
 }
 
 window.addEventListener("resize", () => {
-    if (window.innerWidth <= 1024) {
-        closeSidebar()
-    }   
-})
+    if (window.innerWidth >= 640) {
+        closeSidebar();
+    }
+});
