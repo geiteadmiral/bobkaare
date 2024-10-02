@@ -231,9 +231,7 @@ td:first-child {
         width: 100vw;
     }
 
-
-
-    .split p {
+    .split p, .split ol {
         margin: 5px;
     }
 
