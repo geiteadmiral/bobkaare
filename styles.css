@@ -227,6 +227,16 @@ td:first-child {
         font-size: 2.1rem;
     }
 
+    main {
+        width: 100vw;
+    }
+
+
+
+    .split p {
+        margin: 5px;
+    }
+
 
 }
 
