@@ -38,6 +38,7 @@ p {
     justify-content: space-between;
     align-items: center;
     padding: 0 15px;
+    border-bottom: 5px solid #848FA5;
 }
 
 .headernav {
@@ -116,7 +117,7 @@ main {
 main h1 {
     font-size: 3rem;
     padding-bottom: 15px;
-    border-bottom: 5px #848FA5 dashed ;
+    border-bottom: 5px #c14953 dashed ;
 }
 
 main p {
