@@ -3,6 +3,7 @@
 * {
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
 }
 body {
     background-color: #2D2D2A;
@@ -33,7 +34,7 @@ p {
 .pageheader {
     background-color: #4C4C47; ;
     height: 70px;
-    width: 100vw;
+    width: 100%;
     display: flex;
     position: fixed;
     flex-direction: row;
@@ -243,6 +244,7 @@ td:first-child {
 
     main {
         width: 100vw;
+        padding-top: 20px;
     }
 
     .split {
