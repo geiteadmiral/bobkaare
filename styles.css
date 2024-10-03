@@ -33,7 +33,9 @@ p {
 .pageheader {
     background-color: #4C4C47; ;
     height: 70px;
+    width: 100vw;
     display: flex;
+    position: fixed;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
@@ -111,7 +113,8 @@ a.current {
 main {
     width: 80vw;
     margin: auto;
-    padding-top: 20px;
+    padding-top: 90px;
+    
 }
 
 main h1 {
