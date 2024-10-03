@@ -1,7 +1,7 @@
 let sidebar = document.querySelector('.sidebar')
 
 function openSidebar(){
-    sidebar.style.width = '300px'
+    sidebar.style.width = '350px'
 }
 
 function closeSidebar(){
