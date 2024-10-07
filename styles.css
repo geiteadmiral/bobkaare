@@ -115,20 +115,24 @@ main {
     width: 80vw;
     margin: auto;
     padding-top: 90px;
+    color: #E5DCC5;
     
 }
 
 main h1 {
     font-size: 3rem;
-    padding-bottom: 15px;
+}
+
+.pagetitle {
     border-bottom: 5px #c14953 dashed ;
+    padding: 0px 30px 0px 30px;
 }
 
 main p {
     text-align: center;
     color: #E5DCC5;
     margin: 10px;
-    font-size: 1.3rem;
+    font-size: 1.1rem;
 }
 
 .split {
@@ -148,12 +152,8 @@ main p {
     flex-direction: column;
 }
 
-
-
-
-
 .split .bigger {
-    flex: 2 1 500px; 
+    flex: 3 1 550px; 
 }
 
 .split img {
@@ -166,7 +166,7 @@ main p {
 main li {
     list-style-type: lower-roman;
     color: #E5DCC5;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     padding: 10px;
     margin-left: 30px;
 }
@@ -177,6 +177,7 @@ main li {
 table {
     border-collapse: collapse;
     color: #E5DCC5;
+    font-size: 0.9rem;
 }
 
 th {
@@ -199,6 +200,12 @@ tr:nth-child(even){
 
 td:first-child {
     background-color: #7f2c33;
+}
+
+tfoot td:first-child{
+    background-color: #848FA5;
+    color: #2D2D2A;
+    font-size: 0.9rem;
 }
 
 
@@ -250,7 +257,6 @@ td:first-child {
     .split {
         margin: 20px;
     }
-
 
 }
 
