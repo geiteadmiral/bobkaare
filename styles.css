@@ -1,15 +1,19 @@
 
-/*Fjerner luften som nettleserer legger til rundt hele siden*/
+/*Styling som gjelder alt ------------------------------------------*/
+
+/*Fjerner automatisk padding/margin på alt. Fjerner rammen rundt siden, i tilleg til rundt andre elementer*/
 * {
     padding: 0;
     margin: 0;
-    box-sizing: border-box;
+    box-sizing: border-box; /*Inkluderer padding osv i bredden på alt*/
 }
+
+/*Generell styling-------------------------------------------------*/
+
 body {
     background-color: #2D2D2A;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
-
 
 
 /*Fjerner underlinja fra linker*/
@@ -26,24 +30,24 @@ h1 {
 
 p {
     font-family: sans-serif;
-    font-size: 1.rem;
 }
 
-/*header -------------------------------------*/
+/*header ----------------------------------------*/
 
 .pageheader {
     background-color: #4C4C47; ;
     height: 70px;
     width: 100%;
-    display: flex;
-    position: fixed;
-    flex-direction: row;
-    justify-content: space-between;
+    display: flex; 
+    position: fixed; /*Headeren er stuck på toppen*/
+    flex-direction: row; /*Tingene i headeren er på samme rad*/
+    justify-content: space-between; /*Tingene i headeren er så langt unna hverandre som mulig*/
     align-items: center;
     padding: 0 15px;
     border-bottom: 5px solid #848FA5;
 }
 
+/*Linkene i navbaren i headeren skal være tett intill hverandre på samme rad*/
 .headernav {
     display: flex;
     flex-direction: row;
@@ -62,18 +66,19 @@ p {
     background-color: #7f2c33;
 }
 
+/*Annet farge på linkene med klassen current*/
 a.current {
     cursor: default;
     background-color: #7f2c33;
 }
 
-/*Fjerner dotten fra tingene i lister*/
+/*Fjerner dotten fra tingene i listen*/
 .headernav li {
     list-style: none;
 }
 
 
-/*Sidebar----------------------------------*/
+/*Sidebar-------------------------------------*/
 .openbtn {
     display: none;
     background: none;
@@ -175,7 +180,7 @@ main li {
 /*Tabeller -------------------------------*/
 
 table {
-    border-collapse: collapse;
+    border-collapse: collapse;/*Fjerner mellomrommet imellom rutene i tabellen*/
     color: #E5DCC5;
     font-size: 0.9rem;
 }
@@ -194,10 +199,12 @@ tr{
     background-color: #444441;
 }
 
+/*Annenhver av radene i tabellen har en annen farge*/
 tr:nth-child(even){
     background-color: #2D2D2A;
 }
 
+/*Den første ruta i hver rad er rød, om ikke annet blir spesifisert*/
 td:first-child {
     background-color: #7f2c33;
 }
