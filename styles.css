@@ -87,18 +87,17 @@ a.current {
     font-size: 1.7rem;
     color: #E5DCC5;
     position: fixed;
-    z-index: 1;
     cursor: pointer;
 }
 
 .sidebar {
     background-color: #4C4C47;
     height: 100vh;
-    z-index: 999;
+    z-index: 999; /*Er over de andre tingene på siden*/
     overflow-x: hidden; 
     position: fixed;
-    transition: 0.5s;
-    width: 0;
+    transition: 0.5s; /*Når stylingen endres ser man overgangen i 0.5 sekunder*/
+    width: 0; /*Har ingen bredde til å begynne med*/
 }
 
 .closebtn {
@@ -107,7 +106,7 @@ a.current {
     color: #E5DCC5;
     font-size: 2rem;
     padding: 5px;
-    position: absolute;
+    position: absolute; /*Er alltid på det samme stedet i sidebaren*/
     right: 0;
     cursor: pointer;
 }
@@ -199,6 +198,7 @@ tr{
     background-color: #444441;
 }
 
+
 /*Annenhver av radene i tabellen har en annen farge*/
 tr:nth-child(even){
     background-color: #2D2D2A;
@@ -216,18 +216,58 @@ tfoot td:first-child{
 }
 
 
+/*Responsiv gridfelt -----------------------------------------*/
 
+.responsivegrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    justify-items: center;
+    margin-top: 30px;
+    gap: 20px;
+}
+
+/*FAQ----*/
+
+.qna {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border-bottom: 2px dashed #c14953;
+}
+
+.q {
+    align-self: flex-start;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+.q p {
+    font-size: 1.2rem;
+}
+
+.a {
+    align-self: flex-end;
+    display: flex;
+    align-items: center;
+}
+
+.q > div, .a > div {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #848FA5;
+}
 
 /*Responsivtet -----------------------------*/
 
 /*For små skjermer*/
 @media (max-width: 640px) {
     .pageheader {
-        display: none;
+        display: none; /*skjul headeren*/
     }
 
     .openbtn {
-        display: block;
+        display: block; /*Vis åpne knappen*/
     }
 
     .headernav {
@@ -263,6 +303,10 @@ tfoot td:first-child{
 
     .split {
         margin: 20px;
+    }
+
+    .qna {
+        width: 90%;
     }
 
 }

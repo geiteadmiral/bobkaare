@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles.css">
+    <title>FAQ</title>
+</head>
+<body>
+    <header class="pageheader">
+        <div>
+            <h1 class="headertitle">Bob Kaare</h1>
+        </div>
+        <nav >
+            <ul class="headernav">
+                <li><a href="/">Home</a></li>
+                <li><a href="#">Link 2</a></li>
+                <li><a href="/whybob/">Why Bob?</a></li>
+                <li><a href="/faq/" class="current">FAQ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <button onclick="openSidebar()" class="openbtn">&#9776;</button>
+    <aside class="sidebar">
+        <button onclick="closeSidebar()" class="closebtn">&times</button>
+        <h1 class="headertitle">Bob Kaare</h1>
+        <nav >
+            <ul class="headernav">
+                <li><a href="/">Home</a></li>
+                <li><a href="#">Link 2</a></li>
+                <li><a href="/whybob/">Why Bob?</a></li>
+                <li><a href="/faq/" class="current">FAQ</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <main>
+        <div class="pagetitle">
+            <h1>Frequently Asked Questions</h1>
+            <p>While some politcians make other people answer questions for them, Bob Kaare answers them himself.
+                How does Bob personally answer the most frequently asked questions about his campaign?
+            </p>
+        </div>
+
+        <div class="responsivegrid">
+            <div class="qna">
+                <div class="q">
+                    <div>Q</div>
+                    <p>How do you plan on becoming the president of countries like the United States,
+                        where you must be a natural born citizen for the posision?
+                    </p>
+                </div>
+                <div class="a">
+                    <p>I can assure you that my team and I are rapidly working on finding a solution
+                        to this problem. 
+                    </p>
+                    <div>A</div>
+                </div>
+            </div>
+            <div class="qna">
+                <div class="q">
+                    <div>Q</div>
+                    <p>
+                        What made you decide to get into politics?
+                    </p>
+                </div>
+                <div class="a">
+                    <p>
+                        I just want to be seen as more important than I have been the first 45 
+                        years of my life.
+                    </p>
+                    <div>
+                        A
+                    </div>
+                </div>
+            </div>
+            <div class="qna">
+                <div class="q">
+                    <div>
+                        Q
+                    </div>
+                    <p>
+                        Bob, please just come home. Our kids are waiting for you. 
+                    </p>
+                </div>
+                <div class="a">
+                    <p>No, Sandra. You know I cannot do that. I still have things left to do.</p>
+                    <div>
+                        A
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="../scripts.js"></script>
+</body>
+</html>
