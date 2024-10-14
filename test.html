@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Tabell</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width = device-width, initial-scale = 1.0">
+        <style>
+            table {
+                border-collapse: collapse;
+            }
+
+            th, td {
+                border: 2px solid black;
+                padding: 3px;
+            }
+
+            tr > th {
+                background-color: rgb(145, 26, 26);
+            }
+
+            tr {
+                background-color: lightgray;
+            }
+
+            tr:nth-child(even){
+                background-color: white;
+            }
+
+        </style>
+    </head>
+    <body>
+        <table>
+            <thead>
+                <tr>
+                    <th rowspan="2">
+                        h1
+                    </th>
+                    <th colspan="2">
+                        h2
+                    </th>
+                </tr>
+                <tr>
+                    <th>
+                        h3
+                    </th>
+                    <th>
+                        h4
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        1
+                    </td>
+                    <td>
+                        2
+                    </td>
+                    <td>
+                        3
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        1
+                    </td>
+                    <td>
+                        2
+                    </td>
+                    <td>
+                        3
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        1
+                    </td>
+                    <td>
+                        2
+                    </td>
+                    <td>
+                        3
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>
