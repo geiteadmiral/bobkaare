@@ -1,9 +1,14 @@
 testEl = document.getElementById("test");
 
-let questions = ["1", "2", "3", "4", "5", "6"];
-let value1 = ["a", "a", "b", "b", "c", "c"];
-let value2 = ["b", "b", "c", "c", "a", "a"];
-let value3 = ["c", "c", "a", "a", "b", "b"];
+let questions = ["I would vote for a canditate I know would destory my country ", "Ouestion 2"];
+
+let answer1 = ["Why the fuck would I do that?", "1"]
+let answer2 = ["I haven't really decided what I want yet.", "2"]
+let answer3 = ["Of course. I don't care about the quality of my nation", "3"]
+
+let value1 = ["a", "a"];
+let value2 = ["b", "b"];
+let value3 = ["c", "c"];
 let answers = new Array(questions.length).fill(null);
 
 currentQuestionIndex = 0;
@@ -28,13 +33,15 @@ function nextQuestion() {
 
 function renderQuestion() {
     testEl.innerHTML = `
-    <div>
-        <p>
+    <div class="testquestion">
+        <h2>
             ${questions[currentQuestionIndex]}
-        </p>
-        <button id="btn1" onclick="answerQuestion('${value1[currentQuestionIndex]}', this)">1</button>
-        <button id="btn2" onclick="answerQuestion('${value2[currentQuestionIndex]}', this)">2</button>
-        <button id="btn3" onclick="answerQuestion('${value3[currentQuestionIndex]}', this)">3</button>
+        </h2>
+        <div class="testalternatives">
+            <button class="alternative" id="btn1" onclick="answerQuestion('${value1[currentQuestionIndex]}', this)">${answer1[currentQuestionIndex]}</button>
+            <button class="alternative" id="btn2" onclick="answerQuestion('${value2[currentQuestionIndex]}', this)">${answer2[currentQuestionIndex]}</button>
+            <button class="alternative" id="btn3" onclick="answerQuestion('${value3[currentQuestionIndex]}', this)">${answer3[currentQuestionIndex]}</button>
+        </div>
     </div>
     `;
 

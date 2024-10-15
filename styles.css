@@ -257,6 +257,32 @@ tfoot td:first-child{
     color: #848FA5;
 }
 
+/*Test ------------------------------------------*/
+
+.testquestion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.testquestion h2 {
+    font-size: 1.5rem;
+    text-align: center; 
+    padding: 20px 20px 0 20px;
+}
+
+
+.alternative  {
+    background-color: #848FA5;
+    border: none;
+    border-radius: 20px;
+    padding: 20px;
+    font-size: 1.2rem;
+    margin: 10px;
+    width: 100%;
+}
+
 /*Responsivtet -----------------------------*/
 
 /*For små skjermer*/
