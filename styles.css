@@ -5,15 +5,8 @@
 * {
     padding: 0;
     margin: 0;
-<<<<<<< Updated upstream
     box-sizing: border-box; /*Inkluderer padding osv i bredden på alt*/
-=======
-    box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
->>>>>>> Stashed changes
 }
-
 /*Generell styling-------------------------------------------------*/
 
 body {
@@ -226,7 +219,7 @@ tfoot td:first-child{
 
 .responsivegrid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     justify-items: center;
     margin-top: 30px;
     gap: 20px;

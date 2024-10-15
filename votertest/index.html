@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles.css">
+    <title>Voter Test</title>
+</head>
+<body>
+    <header class="pageheader">
+        <div>
+            <h1 class="headertitle">Bob Kaare</h1>
+        </div>
+        <nav >
+            <ul class="headernav">
+                <li><a href="/">Home</a></li>
+                <li><a href="#">Link 2</a></li>
+                <li><a href="/whybob/">Why Bob?</a></li>
+                <li><a href="/faq/" >FAQ</a></li>
+                <li><a href="#" class="current">Voter Test</a></li>
+    </header>
+
+    <button onclick="openSidebar()" class="openbtn">&#9776;</button>
+    <aside class="sidebar">
+        <button onclick="closeSidebar()" class="closebtn">&times</button>
+        <h1 class="headertitle">Bob Kaare</h1>
+        <nav >
+            <ul class="headernav">
+                <li><a href="/">Home</a></li>
+                <li><a href="#">Link 2</a></li>
+                <li><a href="/whybob/">Why Bob?</a></li>
+                <li><a href="/faq/">FAQ</a></li>
+                <li><a href="#" class="current">Voter Test</a></li>
+            </ul>
+        </nav>
+    </aside>
+    <main>
+        <div id="test"></div>
+        <button class="previous" onclick="previousQuestion()">Previous Question</button>
+        <button id="next" onclick="nextQuestion()">Next Question</button>
+    </main>
+    <script src="../scripts.js"></script>
+    <script src="voterstest.js"></script>
+</body>
+</html>
