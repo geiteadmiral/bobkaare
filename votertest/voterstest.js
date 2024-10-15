@@ -1,14 +1,34 @@
 testEl = document.getElementById("test");
 
-let questions = ["I would vote for a canditate I know would destory my country ", "Ouestion 2"];
+let questions = [
+            "I would vote for a canditate I know would destory my country ",
+            "I want a high quality life.",
+            "We should tax the poor more."
+        ];
 
-let answer1 = ["Why the fuck would I do that?", "1"]
-let answer2 = ["I haven't really decided what I want yet.", "2"]
-let answer3 = ["Of course. I don't care about the quality of my nation", "3"]
+let answer1 = [
+            "Why the fuck would I do that?", 
+            "I don't know. I don't think I care.",
+            "Yes! Let those poor bastards pay! The less you have, the more you must give to make it fair."
+        ]
 
-let value1 = ["a", "a"];
-let value2 = ["b", "b"];
-let value3 = ["c", "c"];
+let answer2 = [
+            "I haven't really decided what I want yet.",
+            "No. I want to suffer. I love suffering. We should all suffer MORE.",
+            "It would be rude to punish the less fortunate in our society further."
+        ]
+
+let answer3 = [
+            "Of course. I don't care about the quality of my nation", 
+            "A high-quality life sounds great!",
+            "What even is taxes man? I DON'T CARE! LEAVE ME ALONE."
+        ]
+
+
+let value1 = ["a", "b", "c"];
+let value2 = ["b", "c", "a"];
+let value3 = ["c", "a", "b"];
+
 let answers = new Array(questions.length).fill(null);
 
 currentQuestionIndex = 0;
@@ -27,7 +47,7 @@ function nextQuestion() {
         currentQuestionIndex++;
         renderQuestion();
     } else {
-        alert(`This is the last question. Your answers were: ${answers.join(', ')}`);
+        alert(`This is the last question. Your answers were: ${answers}. This will mean something eventually.`);
     }
 }
 
@@ -46,13 +66,13 @@ function renderQuestion() {
     `;
 
     if (answers[currentQuestionIndex] === value1[currentQuestionIndex]) {
-        document.getElementById("btn1").style.backgroundColor = "red";
+        document.getElementById("btn1").style.backgroundColor = "#c14953";
 
     } else if (answers[currentQuestionIndex] === value2[currentQuestionIndex]) {
-        document.getElementById("btn2").style.backgroundColor = "red";
+        document.getElementById("btn2").style.backgroundColor = "#c14953";
 
     } else if (answers[currentQuestionIndex] === value3[currentQuestionIndex]) {
-        document.getElementById("btn3").style.backgroundColor = "red";
+        document.getElementById("btn3").style.backgroundColor = "#c14953";
     }
 }
 
@@ -64,7 +84,7 @@ function answerQuestion(answer, button) {
         btn.style.backgroundColor = ""; 
     });
 
-    button.style.backgroundColor = "red";
+    button.style.backgroundColor = "#c14953";
 }
 
 renderQuestion();
