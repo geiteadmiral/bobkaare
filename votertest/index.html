@@ -14,10 +14,9 @@
         <nav >
             <ul class="headernav">
                 <li><a href="/">Home</a></li>
-                <li><a href="#">Link 2</a></li>
                 <li><a href="/whybob/">Why Bob?</a></li>
-                <li><a href="/faq/" >FAQ</a></li>
                 <li><a href="#" class="current">Voter Test</a></li>
+                <li><a href="/faq/" >FAQ</a></li>
     </header>
 
     <button onclick="openSidebar()" class="openbtn">&#9776;</button>
@@ -27,10 +26,9 @@
         <nav >
             <ul class="headernav">
                 <li><a href="/">Home</a></li>
-                <li><a href="#">Link 2</a></li>
                 <li><a href="/whybob/">Why Bob?</a></li>
-                <li><a href="/faq/">FAQ</a></li>
                 <li><a href="#" class="current">Voter Test</a></li>
+                <li><a href="/faq/">FAQ</a></li>
             </ul>
         </nav>
     </aside>
@@ -41,11 +39,17 @@
                 aligns with Bob's!
             </p>
         </div>
+        <div id="startQuiz">
+            <button id="quizbutton" onclick="renderQuestion()">Start Quix</button>
+        </div>
+
         <div id="test"></div>
-        <button id="previous" onclick="previousQuestion()">Previous Question</button>
-        <button id="next" onclick="nextQuestion()">Next Question</button>
+        <div id="navigateQuiz">
+            <button id="previous" onclick="previousQuestion()">Previous Question</button>
+            <button id="next" onclick="nextQuestion()">Next Question</button>
+        </div>
     </main>
-    <script src="../scripts.js"></script>
-    <script src="../votertest/scripts.js"></script>
+    <script src="../scripts.js"></script> <!--Generell javascriptil-->
+    <script src="../votertest/scripts.js"></script> <!--Javascriptfilen til testen spesifikt-->
 </body>
 </html>
