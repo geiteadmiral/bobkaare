@@ -1,46 +1,58 @@
 //hent elementene
+
+
 testEl = document.getElementById("test");
 previousBtn = document.getElementById("previous");
 nextBtn = document.getElementById("next");
 startBtn = document.getElementById("quizbutton");
 
-//spørsmålene
-let questions = [
-            "I would vote for a canditate I know would destory my country ",
-            "I want a high quality life.",
-            "We should tax the poor more."
-        ];
+//objekt med spørsmålene 
+const questionsObject = {
+    question1: {
+        content: "I would vote for a candidate I know know destroy my country.",
+        answers: {
+            answer1: "Why the fuck would I do that?",
+            answer2: "I don't know. I don't think I care.",
+            answer3: "Yes! Let those poor bastards pay! The less you have, the more you must give to make it fair."
+        },
+        values: {
+            value1: "a",
+            value2: "b",
+            value3: "c"
+        },
+    },
+    question2: {
+        content: "I want a high quality life.",
+        answers: {
+            answer1: "I haven't really decided what I want yet.",
+            answer2: "No. I want to suffer. I love suffering. We should all suffer MORE.",
+            answer3: "A high-quality life sounds great!"
+        },
+        values: {
+            value1: "b",
+            value2: "c",
+            value3: "a"
+        }, 
+    },
+    question3: {
+        content: "We should tax the poor more.",
+        answers: {
+            answer1: "Yes! Let those poor bastards pay! The less you have, the more you must give to make it fair.",
+            answer2: "It would be rude to punish the less fortunate in our society.",
+            answer3: "What even is taxes?I DON'T CARE! LEAVE ME ALONE!!"
+        },
+        values: {
+            value1: "c",
+            value2: "a",
+            value3: "b"
+        }
+    }
+};
 
-//svaralternativene
-let answer1 = [
-            "Why the fuck would I do that?", 
-            "I don't know. I don't think I care.",
-            "Yes! Let those poor bastards pay! The less you have, the more you must give to make it fair."
-        ];
-let answer2 = [
-            "I haven't really decided what I want yet.",
-            "No. I want to suffer. I love suffering. We should all suffer MORE.",
-            "It would be rude to punish the less fortunate in our society further."
-        ];
-let answer3 = [
-            "Of course. I don't care about the quality of my nation. Let it burn.", 
-            "A high-quality life sounds great!",
-            "What even is taxes man? I DON'T CARE! LEAVE ME ALONE."
-        ];
-
-//verdien de ulike svaralternativene har (a, b, eller c, 1 på hver kolonne)
-let value1 = ["a", "b", "c"];
-let value2 = ["b", "c", "a"];
-let value3 = ["c", "a", "b"];
-
+let questions = Object.keys(questionsObject) //liste med nøklene i objektet til å telle antall spørsmål (question1, question2...)
 let answers = []; //tom liste til å lagre svarene
 
 currentQuestionIndex = 0; //sier hvilket spørsmål man er på
-
-function previousQuestion() {
-    currentQuestionIndex--; //
-    renderQuestion();
-}
 
 function nextQuestion() {
     //vis neste spørsmål om man ikke allerede er på siste
@@ -56,6 +68,12 @@ function nextQuestion() {
     }
 }
 
+function previousQuestion() {
+    currentQuestionIndex--; 
+    renderQuestion();
+}
+
+
 function renderQuestion() {
     //vis knappene til å bytte spørsmål avhengig av hvilket spørsmål man er på 
     if (currentQuestionIndex === 0){
@@ -70,29 +88,31 @@ function renderQuestion() {
         nextBtn.innerText = "Next Question"
     }
 
-    //vis spørsmålet som tilsvarer current question index
+    let question = questionsObject[questions[currentQuestionIndex]]; //henter spørsmålet man er på
+
+    //vis spørsmålet
     testEl.innerHTML = `
     <div class="testquestion">
         <h2>
-            ${questions[currentQuestionIndex]}
+            ${question.content}
         </h2>
         <div class="testalternatives">
-            <button class="alternative" id="btn1" onclick="answerQuestion('${value1[currentQuestionIndex]}', this)">${answer1[currentQuestionIndex]}</button>
-            <button class="alternative" id="btn2" onclick="answerQuestion('${value2[currentQuestionIndex]}', this)">${answer2[currentQuestionIndex]}</button>
-            <button class="alternative" id="btn3" onclick="answerQuestion('${value3[currentQuestionIndex]}', this)">${answer3[currentQuestionIndex]}</button>
+            <button class="alternative" id="btn1" onclick="answerQuestion('${question.values.value1}', this)">${question.answers.answer1}</button>
+            <button class="alternative" id="btn2" onclick="answerQuestion('${question.values.value2}', this)">${question.answers.answer2}</button>
+            <button class="alternative" id="btn3" onclick="answerQuestion('${question.values.value3}', this)">${question.answers.answer3}</button>
         </div>
         <p>Question ${currentQuestionIndex + 1} of ${questions.length}</p>
     </div>
     `;
 
     //bytt farge på knappen om brukerens svar samsvarer med verdien på alternativet
-    if (answers[currentQuestionIndex] === value1[currentQuestionIndex]) {
+    if (answers[currentQuestionIndex] === question.values.value1) {
         document.getElementById("btn1").style.backgroundColor = "#c14953";
 
-    } else if (answers[currentQuestionIndex] === value2[currentQuestionIndex]) {
+    } else if (answers[currentQuestionIndex] === question.values.value2) {
         document.getElementById("btn2").style.backgroundColor = "#c14953";
 
-    } else if (answers[currentQuestionIndex] === value3[currentQuestionIndex]) {
+    } else if (answers[currentQuestionIndex] === question.values.value3) {
         document.getElementById("btn3").style.backgroundColor = "#c14953";
     }
 
