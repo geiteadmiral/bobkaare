@@ -13,7 +13,7 @@ const questionsObject = {
         answers: {
             answer1: "Why the fuck would I do that?",
             answer2: "I don't know. I don't think I care.",
-            answer3: "Yes! Let those poor bastards pay! The less you have, the more you must give to make it fair."
+            answer3: "I believe that the destruction of my country is necessary for the development of society."
         },
         values: {
             value1: "a",
