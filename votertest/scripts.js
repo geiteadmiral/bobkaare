@@ -5,6 +5,7 @@ testEl = document.getElementById("test");
 previousBtn = document.getElementById("previous");
 nextBtn = document.getElementById("next");
 startBtn = document.getElementById("quizbutton");
+navBtns = document.getElementById("navigateQuiz")
 
 //objekt med spørsmålene 
 const questionsObject = {
@@ -46,6 +47,58 @@ const questionsObject = {
             value2: "a",
             value3: "b"
         }
+    },
+    question4: {
+        content: "More countries should have nuclear weapons.",
+        answers: {
+            answer1: "Yup. It would scare people away from using them, and if it doesn't, maybe it is time for the end anyway.",
+            answer2: "It should probably stay as it is right now. I don't want to take a stance. It is too complicated.",
+            answer3: "No. And the other countries must remove them too. My country should be the only one with it so we are at the top."
+        },
+        values: {
+            value1: "c",
+            value2: "b",
+            value3: "a"
+        }
+    },
+    question5: {
+        content: "I question authority.",
+        answers: {
+            answer1: "I would never question authority. They can control every aspect of my live. I will submit.",
+            answer2: "Authority don't have enough impact on my life for me to care.",
+            answer3: "Questioning authority is vital for the function of democracy."
+        },
+        values: {
+            value1: "c",
+            value2: "b",
+            value3: "a"
+        }
+    },
+    question6: {
+        content: "Climate change is a threat to humanity.",
+        answers: {
+            answer1: "Definitly. It is important that we take immidiate action to stop it.",
+            answer2: "If it is a threat, let it come. Maybe we do indeed deserve destruction.",
+            answer3: "I don't know. I read on Facebook or something that it is a hoax."
+        },
+        values: {
+            value1: "a",
+            value2: "c",
+            value3: "b"
+        }
+    },
+    question7: {
+        content: "We should dismantle democracy.",
+        answers: {
+            answer1: "Yes. The average person is way too stupid to make decisions.",
+            answer2: "What does 'democracy' mean? STOP USING BIG WORDS.",
+            answer3: "No. While democracy is flawed, we must improve it, not dismantle it."
+        },
+        values: {
+            value1: "c",
+            value2: "b",
+            value3: "a"
+        }
     }
 };
 
@@ -55,16 +108,20 @@ let answers = []; //tom liste til å lagre svarene
 currentQuestionIndex = 0; //sier hvilket spørsmål man er på
 
 function nextQuestion() {
-    //vis neste spørsmål om man ikke allerede er på siste
-    if (currentQuestionIndex < questions.length - 1) {
-        currentQuestionIndex++;
-        renderQuestion();
-    } else {
-        //bekreft at man vil fullføre testen
-        if (confirm("Do you want to finish the test and see the results?") == true){
-            //placeholder for det som skal skje
-            alert(`Most of your answers had value ${countAnswer(answers)}. This will mean something eventually. All of your answers were ${answers}`);
+    if (answers[currentQuestionIndex]){
+        //vis neste spørsmål om man ikke allerede er på siste
+        if (currentQuestionIndex < questions.length - 1) {
+            currentQuestionIndex++;
+            renderQuestion();
+        } else {
+            //bekreft at man vil fullføre testen
+            if (confirm("Do you want to finish the test and see the results?") == true){
+                //placeholder for det som skal skje
+                showResults()
+            }
         }
+    } else {
+        alert("You must first answer the question.")
     }
 }
 
@@ -85,8 +142,9 @@ function renderQuestion() {
     } else {
         nextBtn.style.visibility = "visible";
         previousBtn.style.visibility ="visible";
-        nextBtn.innerText = "Next Question"
+        nextBtn.innerText = "Next Question";
     }
+
 
     let question = questionsObject[questions[currentQuestionIndex]]; //henter spørsmålet man er på
 
@@ -156,6 +214,56 @@ function countAnswer(array) {
         }
     }
     return majorityAnswer;
+
+}
+
+function showResults(){
+    navBtns.style.display = "none";
+
+    majorityAnswer = countAnswer(answers)
+
+    let title;
+    let description;
+
+    if (majorityAnswer === "a") {
+        title = "The Patriot";
+        description = `
+            You truly want what's best for your country. You don't have a lot of <em>controversial</em> opinions,
+            and you care a lot about both yourself and the other people around you. Especially your countrymen. <br> <br>
+
+            Bob Kaare is excactly the same. He also wants what's best for you and your countrymen. Therefore, you
+            must <b>vote for Bob.</b>
+        `;
+
+    } else if (majorityAnswer === "b"){
+        title = "The Apath";
+        description = `You don't seem to be that into politics. It might be compilicated for you, or simply too boring.
+            You don't have that many opinions about how your country should be ran, and would rather be
+            as little involved as possible. <br> <br>
+            
+            So does Bob Kaare. He doesn't really care that much about the details. You two would get along perfectly.
+            What is a better leader than one that is as apathetic as yourself? Therefore, you must <b>vote for Bob.<b>`;
+
+    } else if (majorityAnswer === "c") {
+        title = "The destroyer";
+        description = `You have a lot of really controversial opinions. More often that not, you want the world to 
+        burn. That is probably not the most popular view out there, but it is just as valid as everything else.
+        <br> <br>
+        
+        Bob Kaare is the only politican out there that is willing to fight for what you want. Everyone else is just
+        a bunch of pussies. Bob Kaare is so desparate for power that he will do <em>anything</em> for you. Therefore,
+        you must <b>vote for Bob.</b>
+        ` ;
+    }
+    
+    
+    test.innerHTML = `
+        <div id="result">
+            <h3>Your Results</h3>
+            <h2>${title}</h2>
+            <p>${description}</p>
+        </div>
+    `
 
 }
 

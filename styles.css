@@ -327,6 +327,18 @@ tfoot td:first-child{
     background-color: #7f2c33;
 }
 
+#result {
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+#result h2, #result h3 {
+    text-align: center;
+}
+
+
+
 /*Responsivtet -----------------------------*/
 
 /*For små skjermer*/
