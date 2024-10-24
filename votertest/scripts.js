@@ -10,9 +10,9 @@ navBtns = document.getElementById("navigateQuiz")
 //objekt med spørsmålene 
 const questionsObject = {
     question1: {
-        content: "I would vote for a candidate I know know destroy my country.",
+        content: "I would vote for a candidate I know would destroy my country.",
         answers: {
-            answer1: "Why the fuck would I do that?",
+            answer1: "Why the hell would I do that?",
             answer2: "I don't know. I don't think I care.",
             answer3: "I believe that the destruction of my country is necessary for the development of society."
         },
@@ -77,7 +77,7 @@ const questionsObject = {
     question6: {
         content: "Climate change is a threat to humanity.",
         answers: {
-            answer1: "Definitly. It is important that we take immidiate action to stop it.",
+            answer1: "Definitely. It is important that we take immidiate action to stop it.",
             answer2: "If it is a threat, let it come. Maybe we do indeed deserve destruction.",
             answer3: "I don't know. I read on Facebook or something that it is a hoax."
         },
