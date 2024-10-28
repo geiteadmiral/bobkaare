@@ -1,4 +1,7 @@
 
+@import url('https://fonts.cdnfonts.com/css/expletus-sans-2');
+@import url('https://fonts.cdnfonts.com/css/sofia-sans');
+
 /*Styling som gjelder alt ------------------------------------------*/
 
 /*Fjerner automatisk padding/margin på alt. Fjerner rammen rundt siden, i tilleg til rundt andre elementer*/
@@ -11,7 +14,10 @@
 
 body {
     background-color: #2D2D2A;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: 'Sofia Sans', sans-serif;
+                                                
+                                                
+                                                                                      
 }
 
 
@@ -22,14 +28,11 @@ a {
 
 h1 {
     text-align: center;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: 'Expletus Sans', sans-serif;
     font-weight: normal;
     color: #E5DCC5;
 }
 
-p {
-    font-family: sans-serif;
-}
 
 /*header ----------------------------------------*/
 
@@ -219,7 +222,7 @@ tfoot td:first-child{
 
 .responsivegrid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); /**/
     justify-items: center;
     margin-top: 30px;
     gap: 20px;
@@ -231,11 +234,12 @@ tfoot td:first-child{
     display: flex;
     flex-direction: column;
     width: 100%;
-    border: 2px dashed #c14953;
+    border-radius: 30px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     margin-bottom: 20px;
-    padding: 10px;
+    padding: 10px 20px;
+    background-color: #4C4C47;
 }
-
 .q {
     align-self: flex-start;
     font-weight: bold;
@@ -398,6 +402,10 @@ tfoot td:first-child{
 
     .alternative {
         width: 90%;
+    }
+
+    table {
+        font-size: 0.8rem;
     }
 
 }
