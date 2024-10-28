@@ -10,7 +10,7 @@ window.addEventListener("resize", () => {
 
 //sidebaren endrer bredde avhengig av om den er åpen eller ikke
 function openSidebar(){
-    sidebar.style.width = '300px'
+    sidebar.style.width = '330px'
 }
 
 function closeSidebar(){
