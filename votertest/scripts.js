@@ -224,29 +224,38 @@ function showResults(){
 
     let title;
     let description;
+    let image;
+    let imageCred;
+    let imageAlt;
 
     if (majorityAnswer === "a") {
         title = "The Patriot";
         description = `
-            You truly want what's best for your country. You don't have a lot of <em>controversial</em> opinions,
+            You are <b>The Patriot</b>. You truly want what's best for your country. You don't have a lot of controversial opinions,
             and you care a lot about both yourself and the other people around you. Especially your countrymen. <br> <br>
 
             Bob Kaare is excactly the same. He also wants what's best for you and your countrymen. Therefore, you
             must <b>vote for Bob.</b>
         `;
+        image = '../bilder/thepatriot.jpg'
+        imageCred = 'Photo by M Venter: <a href="https://www.pexels.com/photo/photo-of-man-sitting-on-a-cave-1659437/">https://www.pexels.com/photo/photo-of-man-sitting-on-a-cave-1659437/</a>'
+        imageAlt = 'A man sitting in cave. Looking at the view while at peace.'
 
     } else if (majorityAnswer === "b"){
         title = "The Apath";
-        description = `You don't seem to be that into politics. It might be compilicated for you, or simply too boring.
+        description = `You are <b>The Apath</b>. You don't seem to be that into politics. It might be compilicated for you, or simply too boring.
             You don't have that many opinions about how your country should be ran, and would rather be
             as little involved as possible. <br> <br>
             
             So does Bob Kaare. He doesn't really care that much about the details. You two would get along perfectly.
             What is a better leader than one that is as apathetic as yourself? Therefore, you must <b>vote for Bob.<b>`;
+        image = '../bilder/theapath.jpg'
+        imageCred = 'Photo by Tima Miroshnichenko: <a href="https://www.pexels.com/photo/monochrome-photo-of-dissociated-people-on-a-party-5805002/">https://www.pexels.com/photo/monochrome-photo-of-dissociated-people-on-a-party-5805002/<a/>'
+        imageAlt = 'The people at a birtday party. They are sitting on a sofa while looking at their phones.'
 
     } else if (majorityAnswer === "c") {
-        title = "The destroyer";
-        description = `You have a lot of really controversial opinions. More often that not, you want the world to 
+        title = "The Destroyer";
+        description = `You are <b>The Destroyer</b>. You have a lot of really <em>controversial</em> opinions. More often that not, you want the world to 
         burn. That is probably not the most popular view out there, but it is just as valid as everything else.
         <br> <br>
         
@@ -254,14 +263,28 @@ function showResults(){
         a bunch of pussies. Bob Kaare is so desparate for power that he will do <em>anything</em> for you. Therefore,
         you must <b>vote for Bob.</b>
         ` ;
+
+        image = '../bilder/thedestroyer.jpg';
+        imageCred = 'Photo by Jani Kantokoski: <a href="https://www.pexels.com/photo/house-on-fire-25490565/">https://www.pexels.com/photo/house-on-fire-25490565/</a>'
+        imageAlt = 'A burning house'
     }
     
     
     test.innerHTML = `
         <div id="result">
             <h3>Your Results</h3>
-            <h2>${title}</h2>
-            <p>${description}</p>
+            <div class="split">
+                <div>
+                    <h2>${title}</h2>
+                    <p>${description}</p>
+                </div>
+                <figure class="pic">
+                    <img src=${image} />
+                    <figcaption class="imagesource" >
+                        ${imageCred}
+                    </figcaption>
+                </figure>
+            </div>
         </div>
     `
 

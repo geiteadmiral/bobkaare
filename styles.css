@@ -177,6 +177,7 @@ main li {
 
 .imagesource {
     color: gray;
+    font-size: 0.8rem;
 }
 
 .imagesource a {
@@ -184,7 +185,32 @@ main li {
     text-decoration: underline;
 }
 
+.pic {
+    animation-name: slide-in, fade-in;
+    animation-duration: 0.5s, 3s;
+}
 
+@keyframes slide-in {
+    from {
+      translate: 150vw 0;
+      opacity: 0;
+    }
+  
+    to {
+      translate: 0 0;
+      opacity: 1;
+    }
+  }
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
 /*Tabeller -------------------------------*/
 
 table {
@@ -346,6 +372,7 @@ tfoot td:first-child{
 
 #result h2, #result h3 {
     text-align: center;
+    margin: 10px;
 }
 
 
