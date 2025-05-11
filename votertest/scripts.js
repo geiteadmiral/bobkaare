@@ -1,6 +1,4 @@
 //hent elementene
-
-
 testEl = document.getElementById("test");
 previousBtn = document.getElementById("previous");
 nextBtn = document.getElementById("next");
@@ -181,8 +179,7 @@ function answerQuestion(answer, button) {
     //verdien til svaralternativet man valgte blir lagt til i svarlista på plassen til spørsmålet
     answers[currentQuestionIndex] = answer;
 
-    //velger alle knapper i samme element som knappen man trykket på
-    const buttons = button.parentElement.querySelectorAll("button");
+    let buttons = document.querySelectorAll("testalternatives > button");
     buttons.forEach(btn => {
         btn.style.backgroundColor = ""; //fjerner backgrunnsfargen på alle knappene
     });
@@ -268,7 +265,7 @@ function showResults(){
         imageCred = 'Photo by Jani Kantokoski: <a href="https://www.pexels.com/photo/house-on-fire-25490565/">https://www.pexels.com/photo/house-on-fire-25490565/</a>'
         imageAlt = 'A burning house'
     }
-    
+
     
     test.innerHTML = `
         <div id="result">
@@ -279,7 +276,7 @@ function showResults(){
                     <p>${description}</p>
                 </div>
                 <figure class="pic">
-                    <img src=${image} />
+                    <img src=${image} alt=${imageAlt}/>
                     <figcaption class="imagesource" >
                         ${imageCred}
                     </figcaption>
